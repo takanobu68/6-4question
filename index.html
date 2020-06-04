@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		// 引数として渡される関数のことを
+		// コールバック関数という。
+		const plus = (num1, num2) => num1 + num2;
+		// コールバック関数を引数として使う関数やメソッドを
+		// 高階関数という。
+		const result = func => func(1, 2);
+		console.log(result(plus));
+
+		// この仕組みを使っているメソッド
+		// forEach
+		// Reactで使うのはmapが多い
+		const arr = [1, 2, 3, 4, 5];
+
+		arr.forEach(value => console.log(value));
+
+		const resultArr = arr.map(num => num*2);
+		console.log(resultArr);
+
+	</script>
+</body>
+
+</html>
